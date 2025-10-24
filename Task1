@@ -1,0 +1,160 @@
+Task 1: write a program that prints your name, department and favourite quote using escape sequences to align and decorate output
+
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+
+    cout << "Name:\t\tSidra Bashir\n";
+    cout << "Department:\tSCIT\n";
+    cout << "Favourite Quote:\n";
+    cout << "\t\"The future belongs to those who believe\n";
+    cout << "\t in the beauty of their dreams.\"\n";
+
+    return 0;
+}
+
+
+
+Task 2:Write a program that calculates the average rainfall for three months. The program 
+should ask the user to enter the name of each month, such as June or July, and the 
+amount of rain (in inches) that fell each month. 
+
+
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    string month1, month2, month3;
+    float rain1, rain2, rain3;
+
+    cout << "Enter name of first month: ";
+    cin >> month1;
+    cout << "Enter rainfall (in inches) for " << month1 << ": ";
+    cin >> rain1;
+
+    cout << "\nEnter name of second month: ";
+    cin >> month2;
+    cout << "Enter rainfall (in inches) for " << month2 << ": ";
+    cin >> rain2;
+
+    cout << "\nEnter name of third month: ";
+    cin >> month3;
+    cout << "Enter rainfall (in inches) for " << month3 << ": ";
+    cin >> rain3;
+
+    float average = (rain1 + rain2 + rain3) / 3.0;
+
+    cout << "\nThe average rainfall for " << month1 << ", "
+         << month2 << ", and " << month3
+         << " is " << average << " inches.\n";
+
+    return 0;
+}
+
+
+Task 3: The surface area A of a cylinder is given by the following formula: 
+A  = 2 πrh + 2 πr2 
+The volume V of a cylinder is given by the following formula: 
+V = πr2h 
+The term r is the radius and h is the height of the cylinder. Write a program that asks 
+the user for the radius and height of the cylinder and displays the area and volume. 
+Assume that value of π is 3.1415926535. 
+
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    const float PI = 3.1415926535f;
+    float radius, height;
+    float area, volume;
+
+    cout << "Enter the radius of the cylinder: ";
+    cin >> radius;
+
+    cout << "Enter the height of the cylinder: ";
+    cin >> height;
+
+    area = 2 * PI * radius * height + 2 * PI * radius * radius;
+    volume = PI * radius * radius * height;
+
+    cout << "\nArea of the cylinder = " << area << endl;
+    cout << "Volume of the cylinder = " << volume << endl;
+
+    return 0;
+}
+
+
+Task 4: A company is hiring new recruits who should be within 18 to 28 years of age. Write a 
+program that asks the user to input the current year and an applicant’s year of birth. 
+It then displays the age and a message indicating whether the applicant is eligible.
+
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    int currentYear, birthYear, age;
+
+    cout << "Enter the current year: ";
+    cin >> currentYear;
+
+    cout << "Enter the year of birth: ";
+    cin >> birthYear;
+
+    age = currentYear - birthYear;
+
+    cout << "\nApplicant's age: " << age << " years" << endl;
+
+    if (age >= 18 && age <= 28)
+        cout << "Status: Eligible." << endl;
+    else
+        cout << "Status: Not eligible." << endl;
+
+    return 0;
+}
+
+
+Task 5: Write a program that asks the user to enter the length and width of two rectangles. 
+The program should calculate the area of each rectangle using the formula: 
+A𝑟𝑒𝑎 = 𝐿𝑒𝑛𝑔𝑡ℎ × 𝑊𝑖𝑑𝑡ℎ
+ After calculating both areas, the program should: 
+● Display the area of each rectangle, 
+● Indicate whether Rectangle 1 and Rectangle 2 have equal areas or not.
+
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+    float length1, width1, length2, width2;
+    float area1, area2;
+
+    cout << "Enter the length of Rectangle 1: ";
+    cin >> length1;
+    cout << "Enter the width of Rectangle 1: ";
+    cin >> width1;
+
+    cout << "\nEnter the length of Rectangle 2: ";
+    cin >> length2;
+    cout << "Enter the width of Rectangle 2: ";
+    cin >> width2;
+
+    area1 = length1 * width1;
+    area2 = length2 * width2;
+
+    cout << "\nArea of Rectangle 1 = " << area1 << endl;
+    cout << "Area of Rectangle 2 = " << area2 << endl;
+
+    if (area1 == area2)
+        cout << "\nBoth rectangles have equal areas." << endl;
+    else
+        cout << "\nThe rectangles do not have equal areas." << endl;
+
+    return 0;
+}
+
+
